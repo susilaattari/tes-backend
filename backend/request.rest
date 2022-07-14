@@ -47,7 +47,7 @@ POST  http://127.0.0.1:8000/transaksi
 Content-Type: application/json
 
 {
-    "nama":"Matahari",
+    "nama":"Bulan",
     "namaBarang":"Meja",
     "totalBarang":23,
     "hargaBarang":120000,

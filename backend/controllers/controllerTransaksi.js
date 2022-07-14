@@ -4,7 +4,7 @@ class TransaksiData{
     static tambahData (req,res){
         const {nama,namaBarang,totalBarang,hargaBarang,sisaTotal} = req.body
         console.log(nama)
-        const grendTotal = totalBarang * hargaBarang
+        const grendTotal = null
         transaksi.create({ nama,namaBarang,totalBarang,hargaBarang,grendTotal,sisaTotal})
             .then(data => {
                 res.status(201).json(data)

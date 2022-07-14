@@ -21,6 +21,12 @@ module.exports = (sequelize, DataTypes) => {
     grendTotal: DataTypes.INTEGER,
     sisaTotal: DataTypes.INTEGER,
   }, {
+    hooks:{
+      beforeCreate(instance){
+        // console.log(instance);  
+        instance.grendTotal = instance.totalBarang * instance.hargaBarang ;
+      }
+    },
     sequelize,
     modelName: 'transaksi',
   });
