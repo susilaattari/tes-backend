@@ -1,0 +1,55 @@
+GET http://127.0.0.1:8000/barang
+
+###
+POST  http://127.0.0.1:8000/barang
+Content-Type: application/json
+
+{
+    "nama":"Meja Dapur",
+    "harga":230000,
+    "stock":23
+}
+###
+POST  http://127.0.0.1:8000/register
+Content-Type: application/json
+
+{
+    "username":"admin123",
+    "email":"admin123@gmail.com",
+    "password":"admin"
+}
+###
+GET http://127.0.0.1:8000/register
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImFkbWluMTIzIiwiZW1haWwiOiJhZG1pbjEyM0BnbWFpbC5jb20iLCJpZCI6MywiaWF0IjoxNjU3Nzc2NzQ2LCJleHAiOjE2NTc3NzY3NjZ9.nEFIrG7eY9Q4FKyqJ9oFEJeiEAKF9iC0n17ANNXutaw
+###
+POST  http://127.0.0.1:8000/login
+Content-Type: application/json
+
+{
+    "email":"admin123@gmail.com",
+    "password":"admin"
+}
+
+###
+POST  http://127.0.0.1:8000/perusahaan
+Content-Type: application/json
+
+{
+    "kode":"2344",
+    "nama":"matahari"
+}
+###
+GET http://127.0.0.1:8000/perusahaan
+
+###
+POST  http://127.0.0.1:8000/transaksi
+Content-Type: application/json
+
+{
+    "nama":"Matahari",
+    "namaBarang":"Meja",
+    "totalBarang":23,
+    "hargaBarang":120000,
+    "sisaTotal":12,
+}
