@@ -14,6 +14,16 @@ class TransaksiData{
             })
     }
 
+    static async dataTransaksi (req,res){
+        try {
+            const data = await transaksi.findAll()
+            return res.status(200).json({
+                data:data
+            })
+        } catch (error) {
+            console.log(error)
+        }
+    }
 }
 
 module.exports = TransaksiData
